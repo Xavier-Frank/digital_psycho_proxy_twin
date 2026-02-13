@@ -221,6 +221,11 @@ venv\Scripts\activate      # Windows
         + Agency Trust
           = Transaction Trust
 
+---
+**Tagline**
+
+Beyond the PIN — Trust the intent, not just the identity.
+
 
 
 
