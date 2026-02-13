@@ -1,0 +1,10 @@
+{
+  "step_delay": 1.3,
+  "session_time": 47,
+  "corrections": 1.0,
+  "retries": 0.3,
+  "backtracks": 0.2,
+  "pin_delay": 1.2,
+  "amount_hesitation": 2.5,
+  "linear_flow": true
+}
