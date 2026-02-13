@@ -228,7 +228,6 @@ venv\Scripts\activate      # Windows
           = Transaction Trust
 
 ---
-**Tagline**
 
 Beyond the PIN — Trust the intent, not just the identity.
 
