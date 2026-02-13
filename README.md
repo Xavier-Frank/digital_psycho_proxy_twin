@@ -168,8 +168,8 @@ venv\Scripts\activate      # Windows
 
 #### Example Request 
     {
-    "step_delay": 0.2,
-    "session_time": 20,
+    "step_delay": 0.9,
+    "session_time": 25,
     "corrections": 0,
     "retries": 0,
     "backtracks": 0,
@@ -180,15 +180,21 @@ venv\Scripts\activate      # Windows
 
 #### Example Response
     {
-    "subtwin": "psych_proxy",
-    "risk_score": 82.4,
+    "sub_twin": "psych_proxy",
+    "user_id": "xxxxxxx",
+    "risk_score": 60.86,
     "signals": {
-    "linear_flow": true,
-    "zero_hesitation": true,
-    "behavioral_compression": true
+        "step_delay": 0.2,
+        "session_time": 24,
+        "corrections": 0,
+        "retries": 0.3,
+        "backtracks": 0.2,
+        "pin_delay": 0.9,
+        "amount_hesitation": 1.0,
+        "linear_flow": true
     },
-    "interpretation": "Critical agency anomaly"
-    }
+    "interpretation": "High coercion likelihood"
+}
 
 ### 6. Risk Interpretation
 | Score Range | Meaning                  |
