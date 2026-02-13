@@ -75,44 +75,44 @@ It uses **behavioral deviation as a proxy** for cognitive pressure and external 
 
 ## System Flow
 
-Session Input (USSD / mock logs)
-↓
-Psychological Proxy Engine
-↓
-Risk Scoring Model
-↓
-Interpretation Engine
-↓
-JSON Output (Fusion-ready)
+- Session Input (USSD / mock logs)
+- ↓
+- Psychological Proxy Engine
+- ↓
+- Risk Scoring Model
+- ↓
+- Interpretation Engine
+- ↓
+- JSON Output (Fusion-ready)
 
 
 ---
 
 ## Project Structure
 
-digital_twin_prototype/
-│
-├── app/
-│ ├── main.py
-│ ├── psych_proxy/
-│ │ ├── model.py
-│ │ ├── scorer.py
-│ │ ├── signals.py
-│ │ └── baseline.py
-│ │
-│ ├── fusion/
-│ │ └── aggregator.py # future integration layer
-│ │
-│ ├── api/
-│ │ └── server.py
-│
-├── data/
-│ ├── baseline_users.json
-│ ├── normal_session.json
-│ └── coerced_session.json
-│
-├── requirements.txt
-└── README.md
+- digital_twin_prototype/
+- │
+- ├── app/
+- │ ├── main.py
+- │ ├── psych_proxy/
+- │ │ ├── model.py
+- │ │ ├── scorer.py
+- │ │ ├── signals.py
+- │ │ └── baseline.py
+- │ │
+- │ ├── fusion/
+- │ │ └── aggregator.py # future integration layer
+- │ │
+- │ ├── api/
+- │ │ └── server.py
+- │
+- ├── data/
+- │ ├── baseline_users.json
+- │ ├── normal_session.json
+- │ └── coerced_session.json
+- │
+- ├── requirements.txt
+- └── README.md
 
 
 ---
@@ -138,17 +138,19 @@ Chosen for:
 
 ### 1. Create Virtual Environment
 ```bash
-python -m venv venv
+  python -m venv venv
 source venv/bin/activate   # Linux/Mac
 venv\Scripts\activate      # Windows 
 ```
 
 ### 2.Install Dependencies
-- pip install -r requirements.txt
+```bash
+  pip install -r requirements.txt
+```
 
 ### 3. Run the Server
 ```bash
- python app/main.py
+  python app/main.py
 ```
 
 ### 4. Server Runs at:
@@ -161,7 +163,6 @@ venv\Scripts\activate      # Windows
 - POST /psych-proxy
 
 - Parameters
-
   - user_id (string)
   - session (JSON body)
 
@@ -198,9 +199,8 @@ venv\Scripts\activate      # Windows
 | 61–80       | High coercion likelihood |
 | 81–100      | Critical agency anomaly  |
 
-### 7. Integration Model
-
-- Each sub-twin exposes a standard interface:
+### 7. Integration Model 
+#### Each sub-twin exposes a standard interface:
     {
       "sub_twin": "psych_proxy",
       "user_id": "s2345235246346236234623"
@@ -213,13 +213,14 @@ venv\Scripts\activate      # Windows
 ### 8. Strategic Objective
 
 - To demonstrate that Digital Twin intelligence enables a new security paradigm:
-  
-- Identity Trust
-  + Behavioral Trust
-  + Context Trust
-  + Social Trust
-  + Agency Trust
-    = Transaction Trust
+####  
+    Identity Trust +
+      + Behavioral Trust +
+        + Context Trust +
+        + Social Trust + 
+        + Agency Trust
+          = Transaction Trust
+
 
 
 
