@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a **Digital Twin prototype** designed to demonstrate how transaction systems can go **beyond PIN-based authentication** by introducing **intent inference, behavioral trust, and coercion detection**.
+This project is a **Digital Twin prototype** designed to demonstrate how transaction systems can go **beyond PIN-based authentication** by introducing **intent inference, behavioral trust,social graph, and coercion detection**.
 
 The system shows how a user’s actions can be evaluated using a **Digital Twin intelligence layer**, instead of assuming:
 
