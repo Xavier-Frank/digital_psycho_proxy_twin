@@ -1,3 +1,5 @@
+import logging
+
 from app.configs.configs import Configs
 from app.configs.system_modes import SystemModes
 from app.psych_proxy.baseline_engine import BaselineEngine
@@ -28,7 +30,7 @@ def run_psycho_twin(user_id: str, session: dict):
             "risk_score": 0.0,
             "signals": {},
             "interpretation": "Learning User Behavior Baseline",
-            "mode": SystemModes.ACTIVE.value
+            "mode": SystemModes.LEARNING.value
         }
 
     # Build a baseline
@@ -36,7 +38,7 @@ def run_psycho_twin(user_id: str, session: dict):
     baseline = baseline_engine.update_user_profiles(user_id, history)
 
     # Run the twin to do evaluation
-    result = psych_twin.evaluate_user_session(session, baseline)
+    result = psych_twin.evaluate_user_session(session, baseline, user_id)
 
     return result
 

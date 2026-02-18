@@ -9,7 +9,7 @@ risk_interpretation = RiskInterpretation()
 
 class PsychologicalProxyTwin:
 
-    def evaluate_user_session(self, session: dict, baseline: dict):
+    def evaluate_user_session(self, session: dict, baseline: dict, user_id: str):
 
         # extract signals
         signals = {
@@ -27,10 +27,10 @@ class PsychologicalProxyTwin:
 
         return {
             "sub_twin": "psych_proxy",
-            "user_id": session.get("user_id"),
+            "user_id": user_id,
             "risk_score": round(risk_score, 2),
             "signals": signals,
             "interpretation": interpretation,
-            "mode": SystemModes.LEARNING.value,
+            "mode": SystemModes.ACTIVE.value,
         }
 
