@@ -1,10 +1,10 @@
 
 class RiskEngine:
     WEIGHTS = {
-        "time_deviation": 0.25,
-        "amount_deviation": 0.30,
-        "recipient_familiarity": 0.25,
-        "speed_deviation": 0.25
+        "time_deviation": 0.05,
+        "amount_deviation": 0.35,
+        "recipient_familiarity": 0.55,
+        "speed_deviation": 0.05
     }
 
     def compute_risk(self, signals):

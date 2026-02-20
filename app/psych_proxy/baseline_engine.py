@@ -9,6 +9,10 @@ class BaselineEngine:
         self.user_profiles = defaultdict(dict)
 
     def update_user_profiles(self, user_id, events):
+
+        # Please define the attributes to measure
+        # ####################################################
+
         amounts = [e['amount'] for e in events]
         hours = [
             datetime.fromisoformat(e["timestamp"]).hour
@@ -16,6 +20,8 @@ class BaselineEngine:
         ]
         recipients = [e["recipient"] for e in events]
         nav_times = [e["navigation_time_ms"] for e in events]
+
+        ########################################################
 
         profile = {
             "mean_amount": statistics.mean(amounts),
