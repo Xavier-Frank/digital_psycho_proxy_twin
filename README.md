@@ -150,7 +150,7 @@ venv\Scripts\activate      # Windows
 
 ### 3. Run the Server
 ```bash
-  python app/main.py
+  python -m uvicorn main:app --reload
 ```
 
 ### 4. Server Runs at:
